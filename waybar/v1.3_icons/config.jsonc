@@ -53,7 +53,7 @@
     // only the workspace you are ON = white
     "format-active": "<span color='#ffffff'><b>{name}</b></span>{windows}",
 
-    "format-window-separator": "",
+    "format-window-separator": "<span>&nbsp;</span>",
 
     "window-rewrite-default": " <span color='#6c7086'></span>",
 
@@ -69,7 +69,9 @@
       "class<chrome-discord.*>": " <span color='#5865F2'></span>",
       "class<chrome-youtube.*>": " <span color='#FF0000'></span>",
       "class<chrome-github.*>": " <span color='#ffffff'></span>",
+      "class<org.gnome.Nautilus>": "<span color='#B069DB'>󰉋</span>",
       "class<chrome-gemini.*>": " <span color='#0099ff'></span>",
+      "class<chrome-web.whatsapp.*": "<span color='#25D366'>󰖣</span>",
 
       "class<firefox>": " <span color='#ff9e3b'></span>",
       "class<google-chrome>": " <span color='#4285F4'></span>"
