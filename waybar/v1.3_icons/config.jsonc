@@ -24,7 +24,6 @@
   ],
 
   "modules-right": [
-    "mpris",
     "group/tray-expander",
     "backlight",
     "network#icon",
@@ -259,18 +258,6 @@
     "return-type": "json"
   },
 
-  "mpris": {
-    "format": "{player_icon} {artist} - {title}",
-    "format-paused": "{status_icon} <i>{artist} - {title}</i>",
-    "player-icons": {
-      "default": "🎵",
-      "mpv": "🎵"
-    },
-    "status-icons": {
-      "paused": "⏸"
-    },
-    "max-length": 50
-  },
 
   "hyprland/window": {
     "format": "{}"
