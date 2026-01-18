@@ -1,0 +1,211 @@
+{
+  "reload_style_on_change": true,
+  "layer": "top",
+  "position": "left",
+  "modules-left": [
+    "custom/omarchy",
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "custom/update",
+    "custom/screenrecording-indicator",
+    "hyprland/window"
+  ],
+  "modules-right": [
+    "clock",
+    "group/essentials",
+    "custom/power"
+  ],
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "active-only": false,
+    "format": "{icon}\n{windows}",
+    "window-rewrite-default": "󰕮",
+    "format-window-separator": "<span>&nbsp;</span>", // For some reason, makes sure only one window icon shows at a time in one workspace.
+    "window-rewrite": {
+      "title<.*youtube.*>": "", // Windows whose titles contain "youtube"
+      "class<firefox>": "", // Windows whose classes are "firefox"
+      "class<spotify>": "",
+      "class<Alacritty>": "",
+      "class<chrome-discord.*>": "1",
+      "class<chrome-youtube.*>": "",
+      "class<chrome-github.*>": "",
+      "class<org.gnome.Nautilus>": "󰉋",
+      "class<chrome-gemini.*>": "",
+      "class<chrome-web.whatsapp.*": "󰖣"
+    },
+    "format-icons": {
+      "empty": "",
+      "active": "󰮯",
+      "default": "󰮯"
+    },
+    "persistent-workspaces": {
+      "*": 4
+    }
+  },
+  "network": {
+    "format-icons": [
+      "󰤯",
+      "󰤟",
+      "󰤢",
+      "󰤥",
+      "󰤨"
+    ],
+    "format": "{icon}",
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰀂 ",
+    "format-disconnected": "󰖪",
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "interval": 3,
+    "nospacing": 1,
+    "on-click": "omarchy-launch-wifi"
+  },
+  "custom/omarchy": {
+    "format": "<span font='omarchy'>󰣇</span>",
+    "on-click": "~/.local/share/omarchy/bin/omarchy-menu",
+    "tooltip-format": "SUPER + ALT + SPACE"
+  },
+  "custom/update": {
+    "format": "",
+    "exec": "omarchy-update-available",
+    "on-click": "omarchy-launch-floating-terminal-with-presentation omarchy-update",
+    "tooltip-format": "Omarchy update available",
+    "interval": 3600
+  },
+  "cpu": {
+    "interval": 5,
+    "format": "󰍛",
+    "on-click": "$TERMINAL -e btop"
+  },
+  "clock": {
+    "format": "{0:%H}\r{0:%M}",
+    "tooltip-format": "<span>{calendar}</span>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "format": {
+        "mouth": "<span color='#ffead3'><b>{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b>{}</b></span>"
+      }
+    },
+    "on-click-right": "~/.local/share/omarchy/bin/omarchy-cmd-tzupdate"
+  },
+  "battery": {
+    "format": "{icon}",
+    "format-discharging": "{icon}",
+    "format-charging": "{icon}",
+    "format-plugged": "",
+    "format-icons": {
+      "charging": [
+        "󰢜",
+        "󰂆",
+        "󰂇",
+        "󰂈",
+        "󰢝",
+        "󰂉",
+        "󰢞",
+        "󰂊",
+        "󰂋",
+        "󰂅"
+      ],
+      "default": [
+        "󰁺",
+        "󰁻",
+        "󰁼",
+        "󰁽",
+        "󰁾",
+        "󰁿",
+        "󰂀",
+        "󰂁",
+        "󰂂",
+        "󰁹"
+      ]
+    },
+    "format-full": "󰂅",
+    "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
+    "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
+    "interval": 5,
+    "on-click": "omarchy-menu power",
+    "states": {
+      "warning": 20,
+      "critical": 10
+    }
+  },
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "󰂲",
+    "format-connected": "",
+    "tooltip-format": "Devices connected: {num_connections}",
+    "on-click": "blueberry"
+  },
+  "pulseaudio": {
+    "format": "{icon}",
+    "on-click": "$TERMINAL --class=Wiremix -e wiremix",
+    "on-click-right": "pamixer -t",
+    "tooltip-format": "Playing at {volume}%",
+    "scroll-step": 5,
+    "format-muted": "󰝟",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "custom/screenrecording-indicator": {
+    "on-click": "omarchy-cmd-screenrecord",
+    "exec": "$OMARCHY_PATH/default/waybar/indicators/screen-recording.sh",
+    "signal": 8,
+    "return-type": "json"
+  },
+  "mpris": {
+    "format": "{player_icon} {artist} - {title}",
+    "format-paused": "{status_icon} <i>{artist} - {title}</i>",
+    "player-icons": {
+      "default": "🎵",
+      "mpv": "🎵"
+    },
+    "status-icons": {
+      "paused": "⏸"
+    },
+    "max-length": 50
+  },
+  "hyprland/window": {
+    "format": "{initialTitle}",
+    "rotate": 270,
+    "icon": true,
+    "rewrite": {
+      "youtube.com_/": "YouTube",
+      "github.com_/": "GitHub",
+      "chatgpt.com_/": "ChatGPT",
+      "discord.com_/channels/@me": "Discord",
+      "Loading...": "File Manager",
+      "Whatsapp Web": "WhatsApp",
+      "New tab - Obsidian Vault - Obsidian v1.10.6": "Obsidian",
+      "OBS 32.0.2 - Profile: Untitled - Scenes: Untitled": "OBS Studio",
+      "LeetCode - The World's Leading Online Programming Learning Platform": "LeetCode",
+      "": "Desktop"
+    },
+    "separate-outputs": true,
+    "max-length": 50
+  },
+  "group/essentials": {
+    "orientation": "vertical",
+    "modules": [
+      "network",
+      "bluetooth",
+      "pulseaudio",
+      "battery"
+    ]
+  },
+  "custom/power": {
+    "format": "<span font='omarchy'>⏻</span>",
+    "on-click": "~/.local/share/omarchy/bin/omarchy-menu system",
+    "tooltip-format": "SUPER + ESC"
+  }
+}
+
