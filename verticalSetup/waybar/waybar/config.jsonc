@@ -33,6 +33,7 @@
       "class<chrome-github.*>": "",
       "class<org.gnome.Nautilus>": "󰉋",
       "class<chrome-gemini.*>": "",
+      "class<zen>": "",
       "class<chrome-web.whatsapp.*": "󰖣"
     },
     "format-icons": {
