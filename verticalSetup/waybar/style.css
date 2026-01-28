@@ -17,7 +17,6 @@
 window#waybar {
   background-color: #0b0c0e;
   color: rgb(247, 247, 247);
-  border-top-right-radius: 5px;
 }
 
 #essentials {
@@ -111,5 +110,5 @@ window#waybar {
   margin-bottom: 7px;
   margin-right: 4px;
   margin-top: 5px;
-  color: rgb(62, 151, 228)
+  color: rgb(239, 62, 62)
 }
