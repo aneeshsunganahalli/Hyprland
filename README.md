@@ -1,12 +1,7 @@
 # Arch Linux Configuration
 
-> Personal Arch Linux configuration featuring Hyprland, Waybar, Alacritty, and custom themes.
+> My Personal Arch Linux configuration featuring Hyprland, Waybar, Alacritty, and custom themes.
 
-<br>
-
-## Vertical Setup
-
-Vertical monitor configuration optimized for productivity with NES theme.
 
 <div align="center">
   <img src="previews/Vertical.png" alt="Vertical Setup" width="100%">
@@ -24,15 +19,11 @@ Vertical monitor configuration optimized for productivity with NES theme.
 
 **Configuration:** [`verticalSetup/`](verticalSetup/) • [`themes/nes/`](themes/nes/)
 
-<br>
-
 ---
 
-<br>
+## Horizontal Waybar with Icons
 
-## Previous Setup - Horizontal Waybar with Icons
-
-Clean horizontal Waybar configuration with icon-focused design.
+> Horizontal Waybar with Application Icons
 
 <div align="center">
   <img src="previews/IconWaybar.png" alt="Icon Waybar" width="100%">
@@ -42,15 +33,12 @@ Clean horizontal Waybar configuration with icon-focused design.
 
 **Configuration:** [`waybar/`](waybar/)
 
-<br>
 
 ---
 
-<br>
-
 ## Hyprlock
 
-Custom lock screen configuration with modern aesthetics.
+> Custom F1 lock screen configuration 
 
 <div align="center">
   <img src="hypr/hyprlock.png" alt="Hyprlock" width="100%">
@@ -60,15 +48,13 @@ Custom lock screen configuration with modern aesthetics.
 
 **Configuration:** [`hypr/hyprlock.conf`](hypr/hyprlock.conf)
 
-<br>
 
 ---
 
-<br>
 
-## Starship Prompt
+## Starship 
 
-Custom Starship prompt configuration for enhanced terminal experience.
+> Custom Starship.toml configuration.
 
 <div align="center">
   <img src="starship/starship.png" alt="Starship Prompt" width="100%">
@@ -78,11 +64,8 @@ Custom Starship prompt configuration for enhanced terminal experience.
 
 **Configuration:** [`starship/starship.toml`](starship/starship.toml)
 
-<br>
 
 ---
-
-<br>
 
 ## Wallpapers
 
@@ -123,17 +106,14 @@ Custom Starship prompt configuration for enhanced terminal experience.
 
 **All wallpapers:** [`wallpapers/`](wallpapers/)
 
-<br>
-
 ---
 
-<br>
 
 ## Directory Structure
 
 ```
-alacritty/          Terminal emulator configuration
-hypr/               Hyprland window manager
+alacritty/          Terminal configuration
+hypr/               Main Hyprland configuration
 waybar/             Status bar configurations
   ├─ mechabar/      Modern modular waybar
   ├─ custom/        Custom waybar setup
@@ -148,19 +128,6 @@ limine/             Bootloader configuration
 wallpapers/         Wallpaper collection
 ```
 
-<br>
 
 ---
-
-<br>
-
-## Key Configuration Files
-
-```
-hypr/hyprland.conf          Main Hyprland configuration
-hypr/hyprlock.conf          Lock screen configuration
-waybar/mechabar/config.jsonc    Waybar configuration
-alacritty/alacritty.toml    Terminal configuration
-starship/starship.toml      Prompt configuration
-```
 
