@@ -73,22 +73,8 @@
   <table>
     <tr>
       <td align="center" width="33%">
-        <img src="wallpapers/Kame.png" alt="Kame" width="100%">
-        <br><b>Kame</b>
-      </td>
-      <td align="center" width="33%">
         <img src="wallpapers/Samurai.png" alt="Samurai" width="100%">
         <br><b>Samurai</b>
-      </td>
-      <td align="center" width="33%">
-        <img src="wallpapers/danielc.png" alt="Daniel C" width="100%">
-        <br><b>Daniel C</b>
-      </td>
-    </tr>
-    <tr>
-      <td align="center" width="33%">
-        <img src="wallpapers/ferrari1.png" alt="Ferrari" width="100%">
-        <br><b>Ferrari</b>
       </td>
       <td align="center" width="33%">
         <img src="wallpapers/night_city.png" alt="Night City" width="100%">
