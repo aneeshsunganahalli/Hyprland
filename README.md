@@ -1,12 +1,12 @@
 # Arch Linux Configuration
 
-> My personal Arch Linux configuration featuring Hyprland, Waybar, Alacritty, and custom themes.
+> Personal Arch Linux configuration featuring Hyprland, Waybar, Alacritty, and custom themes.
 
 <br>
 
-## 🖥️ Vertical Setup
+## Vertical Setup
 
-A vertical monitor configuration optimized for productivity.
+Vertical monitor configuration optimized for productivity with NES theme.
 
 <div align="center">
   <img src="previews/Vertical.png" alt="Vertical Setup" width="100%">
@@ -16,27 +16,13 @@ A vertical monitor configuration optimized for productivity.
   <img src="previews/VerticalPreview.png" alt="Vertical Setup Detail" width="100%">
 </div>
 
-<br>
-
-**Configuration:** [`verticalSetup/`](verticalSetup/)
-
-<br>
-
----
-
-<br>
-
-## 🎨 Current Theme - NES
-
-Retro NES-inspired theme with pixel-perfect aesthetics.
-
 <div align="center">
   <img src="previews/nes-theme.png" alt="NES Theme" width="100%">
 </div>
 
 <br>
 
-**Configuration:** [`themes/nes/`](themes/nes/)
+**Configuration:** [`verticalSetup/`](verticalSetup/) • [`themes/nes/`](themes/nes/)
 
 <br>
 
@@ -44,7 +30,7 @@ Retro NES-inspired theme with pixel-perfect aesthetics.
 
 <br>
 
-## 🔄 Previous Setup - Horizontal Waybar with Icons
+## Previous Setup - Horizontal Waybar with Icons
 
 Clean horizontal Waybar configuration with icon-focused design.
 
@@ -62,7 +48,7 @@ Clean horizontal Waybar configuration with icon-focused design.
 
 <br>
 
-## 🔒 Hyprlock
+## Hyprlock
 
 Custom lock screen configuration with modern aesthetics.
 
@@ -80,7 +66,7 @@ Custom lock screen configuration with modern aesthetics.
 
 <br>
 
-## ⭐ Starship Prompt
+## Starship Prompt
 
 Custom Starship prompt configuration for enhanced terminal experience.
 
@@ -98,7 +84,7 @@ Custom Starship prompt configuration for enhanced terminal experience.
 
 <br>
 
-## 🌄 Wallpapers
+## Wallpapers
 
 <div align="center">
   <table>
@@ -143,26 +129,38 @@ Custom Starship prompt configuration for enhanced terminal experience.
 
 <br>
 
-## 📂 Key Configurations
+## Directory Structure
 
-| Component | Location |
-|-----------|----------|
-| 🪟 Hyprland | [`hypr/hyprland.conf`](hypr/hyprland.conf) |
-| 📊 Waybar Mechabar | [`waybar/mechabar/`](waybar/mechabar/) |
-| 💻 Alacritty | [`alacritty/alacritty.toml`](alacritty/alacritty.toml) |
-| 🎨 NES Theme | [`themes/nes/`](themes/nes/) |
-| 🌑 Void Theme | [`themes/void/`](themes/void/) |
-| 🚀 Starship | [`starship/starship.toml`](starship/starship.toml) |
-| 🖥️ Tmux | [`tmux/`](tmux/) |
-| 🔧 Limine | [`limine/limine.conf`](limine/limine.conf) |
+```
+alacritty/          Terminal emulator configuration
+hypr/               Hyprland window manager
+waybar/             Status bar configurations
+  ├─ mechabar/      Modern modular waybar
+  ├─ custom/        Custom waybar setup
+  └─ original/      Original configurations
+themes/             Theme collections
+  ├─ nes/           NES retro theme
+  └─ void/          Void theme
+starship/           Shell prompt configuration
+tmux/               Terminal multiplexer
+verticalSetup/      Vertical monitor configuration
+limine/             Bootloader configuration
+wallpapers/         Wallpaper collection
+```
 
 <br>
 
 ---
 
-<div align="center">
-  
-**Enjoy your setup!** 🎉
+<br>
 
-</div>
+## Key Configuration Files
+
+```
+hypr/hyprland.conf          Main Hyprland configuration
+hypr/hyprlock.conf          Lock screen configuration
+waybar/mechabar/config.jsonc    Waybar configuration
+alacritty/alacritty.toml    Terminal configuration
+starship/starship.toml      Prompt configuration
+```
 
