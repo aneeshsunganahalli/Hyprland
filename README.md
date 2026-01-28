@@ -1,113 +1,168 @@
 # Arch Linux Configuration
 
-My personal Arch Linux configuration featuring Hyprland, Waybar, Alacritty, and custom themes.
+> My personal Arch Linux configuration featuring Hyprland, Waybar, Alacritty, and custom themes.
 
----
+<br>
 
 ## 🖥️ Vertical Setup
 
 A vertical monitor configuration optimized for productivity.
 
 <div align="center">
-  <img src="previews/VerticalPreview.png" alt="Vertical Setup Preview" width="45%">
-  <img src="previews/Vertical.png" alt="Vertical Setup" width="45%">
+  <img src="previews/Vertical.png" alt="Vertical Setup" width="100%">
 </div>
 
-📁 Configuration: [`verticalSetup/`](verticalSetup/)
+<div align="center">
+  <img src="previews/VerticalPreview.png" alt="Vertical Setup Detail" width="100%">
+</div>
+
+<br>
+
+**Configuration:** [`verticalSetup/`](verticalSetup/)
+
+<br>
 
 ---
+
+<br>
 
 ## 🎨 Current Theme - NES
 
 Retro NES-inspired theme with pixel-perfect aesthetics.
 
 <div align="center">
-  <img src="previews/nes-theme.png" alt="NES Theme" width="80%">
+  <img src="previews/nes-theme.png" alt="NES Theme" width="100%">
 </div>
 
-📁 Configuration: [`themes/nes/`](themes/nes/)
+<br>
+
+**Configuration:** [`themes/nes/`](themes/nes/)
+
+<br>
 
 ---
+
+<br>
 
 ## 🔄 Previous Setup - Horizontal Waybar with Icons
 
 Clean horizontal Waybar configuration with icon-focused design.
 
 <div align="center">
-  <img src="previews/IconWaybar.png" alt="Icon Waybar" width="80%">
+  <img src="previews/IconWaybar.png" alt="Icon Waybar" width="100%">
 </div>
 
-📁 Configuration: [`waybar/`](waybar/)
+<br>
+
+**Configuration:** [`waybar/`](waybar/)
+
+<br>
 
 ---
+
+<br>
+
+## 🔒 Hyprlock
+
+Custom lock screen configuration with modern aesthetics.
+
+<div align="center">
+  <img src="hypr/hyprlock.png" alt="Hyprlock" width="100%">
+</div>
+
+<br>
+
+**Configuration:** [`hypr/hyprlock.conf`](hypr/hyprlock.conf)
+
+<br>
+
+---
+
+<br>
 
 ## ⭐ Starship Prompt
 
 Custom Starship prompt configuration for enhanced terminal experience.
 
-📁 Configuration: [`starship/starship.toml`](starship/starship.toml)
+<div align="center">
+  <img src="starship/starship.png" alt="Starship Prompt" width="100%">
+</div>
+
+<br>
+
+**Configuration:** [`starship/starship.toml`](starship/starship.toml)
+
+<br>
 
 ---
+
+<br>
 
 ## 🌄 Wallpapers
 
 <div align="center">
   <table>
     <tr>
-      <td align="center">
-        <img src="wallpapers/Kame.png" alt="Kame" width="250"><br>
-        <b>Kame</b>
+      <td align="center" width="33%">
+        <img src="wallpapers/Kame.png" alt="Kame" width="100%">
+        <br><b>Kame</b>
       </td>
-      <td align="center">
-        <img src="wallpapers/Samurai.png" alt="Samurai" width="250"><br>
-        <b>Samurai</b>
+      <td align="center" width="33%">
+        <img src="wallpapers/Samurai.png" alt="Samurai" width="100%">
+        <br><b>Samurai</b>
       </td>
-      <td align="center">
-        <img src="wallpapers/danielc.png" alt="Daniel C" width="250"><br>
-        <b>Daniel C</b>
+      <td align="center" width="33%">
+        <img src="wallpapers/danielc.png" alt="Daniel C" width="100%">
+        <br><b>Daniel C</b>
       </td>
     </tr>
     <tr>
-      <td align="center">
-        <img src="wallpapers/ferrari1.png" alt="Ferrari" width="250"><br>
-        <b>Ferrari</b>
+      <td align="center" width="33%">
+        <img src="wallpapers/ferrari1.png" alt="Ferrari" width="100%">
+        <br><b>Ferrari</b>
       </td>
-      <td align="center">
-        <img src="wallpapers/night_city.png" alt="Night City" width="250"><br>
-        <b>Night City</b>
+      <td align="center" width="33%">
+        <img src="wallpapers/night_city.png" alt="Night City" width="100%">
+        <br><b>Night City</b>
       </td>
-      <td align="center">
-        <img src="wallpapers/raiden.png" alt="Raiden" width="250"><br>
-        <b>Raiden</b>
+      <td align="center" width="33%">
+        <img src="wallpapers/raiden.png" alt="Raiden" width="100%">
+        <br><b>Raiden</b>
       </td>
     </tr>
   </table>
 </div>
 
-📁 All wallpapers: [`wallpapers/`](wallpapers/)
+<br>
+
+**All wallpapers:** [`wallpapers/`](wallpapers/)
+
+<br>
 
 ---
 
-## 📂 Directory Structure
+<br>
 
-- **[`alacritty/`](alacritty/)** - Terminal emulator configuration
-- **[`hypr/`](hypr/)** - Hyprland window manager configuration
-- **[`waybar/`](waybar/)** - Status bar configurations
-- **[`themes/`](themes/)** - Theme collections (NES, Void)
-- **[`starship/`](starship/)** - Shell prompt configuration
-- **[`tmux/`](tmux/)** - Terminal multiplexer configuration
-- **[`limine/`](limine/)** - Bootloader configuration
-- **[`verticalSetup/`](verticalSetup/)** - Vertical monitor setup
+## 📂 Key Configurations
 
----
+| Component | Location |
+|-----------|----------|
+| 🪟 Hyprland | [`hypr/hyprland.conf`](hypr/hyprland.conf) |
+| 📊 Waybar Mechabar | [`waybar/mechabar/`](waybar/mechabar/) |
+| 💻 Alacritty | [`alacritty/alacritty.toml`](alacritty/alacritty.toml) |
+| 🎨 NES Theme | [`themes/nes/`](themes/nes/) |
+| 🌑 Void Theme | [`themes/void/`](themes/void/) |
+| 🚀 Starship | [`starship/starship.toml`](starship/starship.toml) |
+| 🖥️ Tmux | [`tmux/`](tmux/) |
+| 🔧 Limine | [`limine/limine.conf`](limine/limine.conf) |
 
-## 🚀 Quick Links
-
-- Main Hyprland Config: [`hypr/hyprland.conf`](hypr/hyprland.conf)
-- Waybar Mechabar: [`waybar/mechabar/`](waybar/mechabar/)
-- NES Theme: [`themes/nes/`](themes/nes/)
-- Void Theme: [`themes/void/`](themes/void/)
+<br>
 
 ---
 
+<div align="center">
+  
 **Enjoy your setup!** 🎉
+
+</div>
+
