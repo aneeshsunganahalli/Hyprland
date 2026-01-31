@@ -21,6 +21,18 @@
 
 ---
 
+## Dynamic Island
+
+<div align="center">
+  <img src="previews/IslandPreview.png" alt="Dynamic Island" width="100%">
+</div>
+
+<br>
+
+**Configuration:** [`waybar/`](waybar/)
+
+---
+
 ## Horizontal Waybar with Icons
 
 > Horizontal Waybar with Application Icons
