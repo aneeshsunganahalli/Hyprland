@@ -66,6 +66,18 @@
 
 ## Starship 
 
+> Minimal Current Starship.toml configuration.
+
+<div align="center">
+  <img src="starship/starship-minimal.png" alt="Starship Prompt" width="100%">
+</div>
+
+<br>
+
+**Configuration:** [`starship/starship-minimal.toml`](starship/starship-minimal.toml)
+
+<br>
+
 > Custom Starship.toml configuration.
 
 <div align="center">
