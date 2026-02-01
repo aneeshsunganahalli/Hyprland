@@ -1,0 +1,41 @@
+# Alacritty Custom Red & Black Theme
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.primary]
+# The primary colors for the terminal window
+background = '#101010'
+foreground = '#CECFC9'
+
+[colors.cursor]
+text = 'CellBackground'
+cursor = 'CellForeground'
+
+[window]
+opacity = 0.95
+
+
+[colors.normal]
+# Normal colors used by applications
+black = '#000000'
+red = '#84c9ec'
+green = '#9A9D9A'   # Using the provided grey as a neutral
+yellow = '#9A9D9A'  # Using the provided grey as a neutral
+blue = '#9A9D9A'    # Using the provided grey as a neutral
+magenta = '#37b0d9' # Reusing the red for magenta
+cyan = '#9A9D9A'    # Using the provided grey as a neutral
+white = '#CECFC9'
+
+[colors.bright]
+# Bright colors used for emphasis
+black = '#9A9D9A'
+red = '#86caec'
+green = '#CECFC9'   # Using the provided light grey as a bright neutral
+yellow = '#CECFC9'  # Using the provided light grey as a bright neutral
+blue = '#CECFC9'    # Using the provided light grey as a bright neutral
+magenta = '#0fb1da' # Reusing the bright red for bright magenta
+cyan = '#CECFC9'    # Using the provided light grey as a bright neutral
+white = '#FFFFFF'   # Using pure white for maximum contrast
+# Bright Red - '#DA0F0F', Normal Red - '#D93F37' 
+
