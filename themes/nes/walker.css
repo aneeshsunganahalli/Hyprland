@@ -1,0 +1,14 @@
+@define-color selected-text #D93F37;
+@define-color text #CECFC9;
+@define-color base #101010;
+@define-color border #9A9D9A;
+@define-color foreground #CECFC9;
+@define-color background #101010;
+
+
+
+/* ROUNDED BODY */
+#box, .box-wrapper {
+    border-radius: 16px; /* Ensures it uses your defined dark color */
+}
+
