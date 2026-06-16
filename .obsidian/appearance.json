@@ -1,0 +1,20 @@
+{
+  "cssTheme": "Dawn",
+  "theme": "obsidian",
+  "monospaceFontFamily": "JetBrainsMono Nerd Font Propo",
+  "accentColor": "#ffffff",
+  "baseFontSize": 17,
+  "nativeMenus": false,
+  "enabledCssSnippets": [
+    "command-palette",
+    "wide-tables",
+    "colored-sidebar",
+    "golang-vscode",
+    "notebook-themes",
+    "highlight-text",
+    "only-background",
+    "github-dark",
+    "calendar",
+    "home-tab-modern-dark"
+  ]
+}

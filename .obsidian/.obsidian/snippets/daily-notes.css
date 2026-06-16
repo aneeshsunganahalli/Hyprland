@@ -1,0 +1,378 @@
+/* ================================================================
+   Daily Notes — Aesthetic Manila Notebook
+   Scoped to notes with `cssclasses: [daily-note]` in frontmatter.
+   Features: Virgil handwritten font, manila paper, ruled lines,
+   red margin, warm ink tones.
+   ================================================================ */
+
+
+/* ── Virgil Handwritten Font (Excalidraw's font) ── */
+@font-face {
+  font-family: 'Virgil';
+  src: url('https://unpkg.com/@excalidraw/excalidraw@0.17.0/dist/prod/Virgil-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* ================================================================
+   ROOT VARIABLES FOR DAILY NOTES
+   ================================================================ */
+.daily-note {
+  /* Paper & Ink */
+  --dn-paper:             #f3deaf;
+  --dn-paper-dark:        #e8cd93;
+  --dn-ink:               #26241f;
+  --dn-ink-faint:         rgba(38, 36, 31, 0.5);
+  --dn-ink-faintest:      rgba(38, 36, 31, 0.15);
+
+  /* Rule lines */
+  --dn-rule-color:        rgba(100, 149, 237, 0.18);
+  --dn-rule-spacing:      32px;
+  --dn-margin-line-color: rgba(220, 70, 70, 0.35);
+  --dn-margin-left:       60px;
+
+  /* Accent colors (from notebook-themes pen palette) */
+  --dn-blue:              #3f76ed;
+  --dn-light-blue:        #54b6f8;
+  --dn-red:               #e14a49;
+  --dn-green:             #15b64f;
+  --dn-purple:            #9b4ff0;
+
+  /* Selection */
+  --dn-selection:         rgba(243, 222, 175, 0.5);
+  --dn-highlight:         rgba(250, 159, 80, 0.3);
+}
+
+
+/* ================================================================
+   PAGE BACKGROUND — Manila with Ruled Lines & Red Margin
+   ================================================================ */
+
+/* Reading view */
+.daily-note .markdown-preview-view,
+.daily-note .markdown-rendered {
+  background-color: var(--dn-paper) !important;
+  background-image:
+    /* Red vertical margin line */
+    linear-gradient(
+      90deg,
+      transparent calc(var(--dn-margin-left) - 1px),
+      var(--dn-margin-line-color) calc(var(--dn-margin-left) - 1px),
+      var(--dn-margin-line-color) calc(var(--dn-margin-left) + 1px),
+      transparent calc(var(--dn-margin-left) + 1px)
+    ),
+    /* Horizontal ruled lines */
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent calc(var(--dn-rule-spacing) - 1px),
+      var(--dn-rule-color) calc(var(--dn-rule-spacing) - 1px),
+      var(--dn-rule-color) var(--dn-rule-spacing)
+    ) !important;
+  background-position: 0 0 !important;
+  background-size: 100% var(--dn-rule-spacing) !important;
+  background-attachment: local !important;
+  color: var(--dn-ink) !important;
+  font-family: 'Virgil', 'Segoe Print', 'Comic Sans MS', cursive !important;
+  font-size: 18px !important;
+  line-height: var(--dn-rule-spacing) !important;
+  padding-left: calc(var(--dn-margin-left) + 20px) !important;
+  padding-right: 40px !important;
+  padding-top: 24px !important;
+  color-scheme: light;
+}
+
+/* Editing view (live preview / source) */
+.daily-note .markdown-source-view .cm-scroller {
+  background-color: var(--dn-paper) !important;
+  background-image:
+    /* Red vertical margin line */
+    linear-gradient(
+      90deg,
+      transparent calc(var(--dn-margin-left) - 1px),
+      var(--dn-margin-line-color) calc(var(--dn-margin-left) - 1px),
+      var(--dn-margin-line-color) calc(var(--dn-margin-left) + 1px),
+      transparent calc(var(--dn-margin-left) + 1px)
+    ),
+    /* Horizontal ruled lines */
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent calc(var(--dn-rule-spacing) - 1px),
+      var(--dn-rule-color) calc(var(--dn-rule-spacing) - 1px),
+      var(--dn-rule-color) var(--dn-rule-spacing)
+    ) !important;
+  background-position: 0 0 !important;
+  background-size: 100% var(--dn-rule-spacing) !important;
+  background-attachment: local !important;
+  color: var(--dn-ink) !important;
+  font-family: 'Virgil', 'Segoe Print', 'Comic Sans MS', cursive !important;
+  font-size: 18px !important;
+  line-height: var(--dn-rule-spacing) !important;
+  padding-left: calc(var(--dn-margin-left) + 20px) !important;
+  padding-right: 40px !important;
+  padding-top: 24px !important;
+  color-scheme: light;
+}
+
+/* Editing view content lines */
+.daily-note .markdown-source-view .cm-line {
+  font-family: 'Virgil', 'Segoe Print', 'Comic Sans MS', cursive !important;
+  color: var(--dn-ink) !important;
+}
+
+/* Remove any dark background overrides on the view container */
+.daily-note .view-content {
+  background-color: var(--dn-paper) !important;
+}
+
+/* Subtle paper grain texture overlay */
+.daily-note .markdown-preview-view::before,
+.daily-note .markdown-source-view .cm-scroller::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  z-index: 0;
+}
+
+
+/* ================================================================
+   TYPOGRAPHY — Warm, Handwritten Feel
+   ================================================================ */
+
+/* Headings — slightly larger, pen-blue, subtle underline */
+.daily-note h1,
+.daily-note .cm-header-1,
+.daily-note .HyperMD-header-1 {
+  font-family: 'Virgil', cursive !important;
+  color: var(--dn-ink) !important;
+  font-size: 2em !important;
+  font-weight: normal !important;
+  border-bottom: 2px solid var(--dn-ink-faintest) !important;
+  padding-bottom: 4px;
+  margin-bottom: 8px;
+}
+
+.daily-note h2,
+.daily-note .cm-header-2,
+.daily-note .HyperMD-header-2 {
+  font-family: 'Virgil', cursive !important;
+  color: var(--dn-blue) !important;
+  font-size: 1.5em !important;
+  font-weight: normal !important;
+  border-bottom: 1.5px dashed var(--dn-rule-color) !important;
+  padding-bottom: 2px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.daily-note h3,
+.daily-note .cm-header-3,
+.daily-note .HyperMD-header-3 {
+  font-family: 'Virgil', cursive !important;
+  color: var(--dn-purple) !important;
+  font-size: 1.25em !important;
+  font-weight: normal !important;
+  margin-top: 16px;
+}
+
+.daily-note h4, .daily-note h5, .daily-note h6,
+.daily-note .cm-header-4, .daily-note .cm-header-5, .daily-note .cm-header-6 {
+  font-family: 'Virgil', cursive !important;
+  color: var(--dn-ink) !important;
+  font-weight: normal !important;
+}
+
+
+/* ================================================================
+   HORIZONTAL RULE — Decorative Divider
+   ================================================================ */
+.daily-note hr {
+  border: none !important;
+  height: 2px !important;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--dn-ink-faintest) 15%,
+    var(--dn-ink-faint) 50%,
+    var(--dn-ink-faintest) 85%,
+    transparent 100%
+  ) !important;
+  margin: 16px 0 !important;
+}
+
+
+/* ================================================================
+   LINKS — Pen Blue
+   ================================================================ */
+.daily-note a,
+.daily-note .cm-link,
+.daily-note .cm-hmd-internal-link,
+.daily-note .internal-link {
+  color: var(--dn-blue) !important;
+  text-decoration: underline !important;
+  text-decoration-style: wavy !important;
+  text-decoration-color: var(--dn-ink-faintest) !important;
+  text-underline-offset: 3px !important;
+}
+.daily-note a:hover,
+.daily-note .cm-link:hover,
+.daily-note .internal-link:hover {
+  color: var(--dn-light-blue) !important;
+  text-decoration-color: var(--dn-light-blue) !important;
+}
+
+
+/* ================================================================
+   LISTS & CHECKBOXES — Warm Notebook Style
+   ================================================================ */
+.daily-note ul,
+.daily-note ol {
+  color: var(--dn-ink) !important;
+}
+
+.daily-note .task-list-item-checkbox {
+  border-color: var(--dn-ink-faint) !important;
+  border-width: 2px !important;
+  border-radius: 3px !important;
+  background: transparent !important;
+}
+.daily-note .task-list-item-checkbox:checked,
+.daily-note input[type="checkbox"]:checked {
+  background-color: var(--dn-green) !important;
+  border-color: var(--dn-green) !important;
+}
+
+/* Strikethrough completed tasks */
+.daily-note .task-list-item.is-checked .task-list-item-checkbox ~ * {
+  text-decoration: line-through !important;
+  color: var(--dn-ink-faint) !important;
+}
+
+
+/* ================================================================
+   BOLD, ITALIC, HIGHLIGHTS — Warm Accents
+   ================================================================ */
+.daily-note strong,
+.daily-note .cm-strong {
+  color: var(--dn-ink) !important;
+  background: none !important;
+  -webkit-text-fill-color: var(--dn-ink) !important;
+  font-weight: bold !important;
+}
+
+.daily-note em,
+.daily-note .cm-em {
+  color: var(--dn-blue) !important;
+  font-style: italic;
+}
+
+.daily-note mark,
+.daily-note .cm-highlight {
+  background-color: var(--dn-highlight) !important;
+  color: var(--dn-ink) !important;
+  border-radius: 2px;
+  padding: 1px 3px;
+}
+
+
+/* ================================================================
+   SELECTION & CURSOR
+   ================================================================ */
+.daily-note .cm-selectionBackground,
+.daily-note ::selection {
+  background-color: var(--dn-selection) !important;
+}
+
+.daily-note .cm-cursor,
+.daily-note .cm-cursor-primary {
+  border-left-color: var(--dn-ink) !important;
+}
+
+/* Active line */
+.daily-note .cm-active {
+  background-color: rgba(243, 222, 175, 0.3) !important;
+}
+
+
+/* ================================================================
+   BLOCKQUOTES — Ink-pencil style
+   ================================================================ */
+.daily-note blockquote,
+.daily-note .cm-quote {
+  border-left: 3px solid var(--dn-ink-faint) !important;
+  color: var(--dn-ink-faint) !important;
+  font-style: italic;
+  padding-left: 16px;
+  margin-left: 0;
+}
+
+
+/* ================================================================
+   TAGS — Subtle warm labels
+   ================================================================ */
+.daily-note .tag,
+.daily-note .cm-hashtag {
+  color: var(--dn-purple) !important;
+  background-color: rgba(155, 79, 240, 0.08) !important;
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-size: 0.9em;
+}
+
+
+/* ================================================================
+   CODE — Keep legible on manila
+   ================================================================ */
+.daily-note code:not(pre code),
+.daily-note .cm-inline-code {
+  background-color: var(--dn-paper-dark) !important;
+  color: var(--dn-ink) !important;
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-family: 'JetBrainsMono Nerd Font Propo', monospace !important;
+  font-size: 0.85em;
+}
+
+/* Code blocks — slightly darker manila */
+.daily-note pre,
+.daily-note pre code {
+  background-color: var(--dn-paper-dark) !important;
+  color: var(--dn-ink) !important;
+  border-radius: 6px;
+  font-family: 'JetBrainsMono Nerd Font Propo', monospace !important;
+}
+
+
+/* ================================================================
+   FRONTMATTER — Hide the cssclasses clutter in reading view
+   ================================================================ */
+.daily-note .frontmatter-container {
+  display: none !important;
+}
+
+
+/* ================================================================
+   SCROLLBAR — Warm toned
+   ================================================================ */
+.daily-note ::-webkit-scrollbar {
+  width: 8px;
+}
+.daily-note ::-webkit-scrollbar-track {
+  background: var(--dn-paper) !important;
+}
+.daily-note ::-webkit-scrollbar-thumb {
+  background-color: var(--dn-ink-faintest) !important;
+  border-radius: 4px;
+}
+.daily-note ::-webkit-scrollbar-thumb:hover {
+  background-color: var(--dn-ink-faint) !important;
+}

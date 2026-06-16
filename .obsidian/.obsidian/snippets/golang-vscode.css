@@ -1,0 +1,323 @@
+/* ================================================================
+   VS Code Dark+ — Go-Only Syntax Highlighting (Identical to VS Code)
+   Scoped exclusively to ```go code blocks.
+   Works in both Editing (CM6) and Reading (Prism) views.
+   ================================================================ */
+
+:root {
+  /* ── VS Code Dark+ Exact Palette ── */
+  --vsc-go-bg:          #1e1e1e;  /* editor background               */
+  --vsc-go-text:        #d4d4d4;  /* default foreground               */
+  --vsc-go-keyword:     #569cd6;  /* package, import, func, var, const, type, struct, interface, map, chan */
+  --vsc-go-control:     #c586c0;  /* if, else, for, range, switch, case, return, break, continue, defer, go, select, fallthrough, goto, default */
+  --vsc-go-string:      #ce9178;  /* string / rune literals           */
+  --vsc-go-comment:     #6a9955;  /* comments (NOT italic in Dark+)   */
+  --vsc-go-function:    #dcdcaa;  /* function & method names          */
+  --vsc-go-type:        #4ec9b0;  /* int, string, bool, error, custom types, built-in funcs */
+  --vsc-go-number:      #b5cea8;  /* numeric literals                 */
+  --vsc-go-variable:    #9cdcfe;  /* variables & parameters           */
+  --vsc-go-operator:    #d4d4d4;  /* = := + - * / etc.                */
+  --vsc-go-punctuation: #d4d4d4;  /* {} () [] , ; .                   */
+  --vsc-go-constant:    #569cd6;  /* true, false, nil, iota (blue, same as keywords in Dark+) */
+  --vsc-go-namespace:   #4ec9b0;  /* package names (fmt, os, etc.)    */
+}
+
+
+/* ================================================================
+   READING VIEW — Prism Token Overrides (scoped to Go)
+   High-specificity selectors to override github-dark.css
+   ================================================================ */
+
+/* Default text color */
+body.theme-dark .code-styler pre.code-styler-pre code[class*="language-go"],
+body.theme-dark .markdown-rendered pre code[class*="language-go"],
+body.theme-dark .markdown-preview-view pre code[class*="language-go"] {
+  color: var(--vsc-go-text) !important;
+}
+
+/* Keywords */
+body.theme-dark .code-styler pre.code-styler-pre code[class*="language-go"] .token.keyword,
+body.theme-dark .markdown-rendered pre code[class*="language-go"] .token.keyword,
+body.theme-dark .markdown-preview-view pre code[class*="language-go"] .token.keyword {
+  color: var(--vsc-go-keyword) !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+}
+
+/* Built-in types, class names, structs, interfaces — teal (#4ec9b0) */
+body.theme-dark .code-styler pre.code-styler-pre code[class*="language-go"] .token.builtin,
+body.theme-dark .markdown-rendered pre code[class*="language-go"] .token.builtin,
+body.theme-dark .markdown-preview-view pre code[class*="language-go"] .token.builtin,
+body.theme-dark .code-styler pre.code-styler-pre code[class*="language-go"] .token.class-name,
+body.theme-dark .markdown-rendered pre code[class*="language-go"] .token.class-name,
+body.theme-dark .markdown-preview-view pre code[class*="language-go"] .token.class-name,
+body.theme-dark .code-styler pre.code-styler-pre code[class*="language-go"] .token.type-definition,
+body.theme-dark .markdown-rendered pre code[class*="language-go"] .token.type-definition,
+body.theme-dark .markdown-preview-view pre code[class*="language-go"] .token.type-definition,
+body.theme-dark .code-styler pre.code-styler-pre code[class*="language-go"] .token.maybe-class-name,
+body.theme-dark .markdown-rendered pre code[class*="language-go"] .token.maybe-class-name,
+body.theme-dark .markdown-preview-view pre code[class*="language-go"] .token.maybe-class-name,
+body.theme-dark .code-styler pre.code-styler-pre code[class*="language-go"] .token.known-class-name,
+body.theme-dark .markdown-rendered pre code[class*="language-go"] .token.known-class-name,
+body.theme-dark .markdown-preview-view pre code[class*="language-go"] .token.known-class-name {
+  color: var(--vsc-go-type) !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+}
+
+/* Strings & chars */
+body.theme-dark .code-styler pre.code-styler-pre code[class*="language-go"] .token.string,
+body.theme-dark .markdown-rendered pre code[class*="language-go"] .token.string,
+body.theme-dark .markdown-preview-view pre code[class*="language-go"] .token.string,
+body.theme-dark .code-styler pre.code-styler-pre code[class*="language-go"] .token.char,
+body.theme-dark .markdown-rendered pre code[class*="language-go"] .token.char,
+body.theme-dark .markdown-preview-view pre code[class*="language-go"] .token.char,
+body.theme-dark .code-styler pre.code-styler-pre code[class*="language-go"] .token.attr-value,
+body.theme-dark .markdown-rendered pre code[class*="language-go"] .token.attr-value,
+body.theme-dark .markdown-preview-view pre code[class*="language-go"] .token.attr-value {
+  color: var(--vsc-go-string) !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+}
+
+/* Comments — NOT italic in VS Code Dark+ */
+body.theme-dark .code-styler pre.code-styler-pre code[class*="language-go"] .token.comment,
+body.theme-dark .markdown-rendered pre code[class*="language-go"] .token.comment,
+body.theme-dark .markdown-preview-view pre code[class*="language-go"] .token.comment,
+body.theme-dark .code-styler pre.code-styler-pre code[class*="language-go"] .token.prolog,
+body.theme-dark .markdown-rendered pre code[class*="language-go"] .token.prolog,
+body.theme-dark .markdown-preview-view pre code[class*="language-go"] .token.prolog {
+  color: var(--vsc-go-comment) !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+}
+
+/* Functions */
+body.theme-dark .code-styler pre.code-styler-pre code[class*="language-go"] .token.function,
+body.theme-dark .markdown-rendered pre code[class*="language-go"] .token.function,
+body.theme-dark .markdown-preview-view pre code[class*="language-go"] .token.function,
+body.theme-dark .code-styler pre.code-styler-pre .code-styler-line-text code[class*="language-go"] .token.function,
+body.theme-dark .code-styler pre.code-styler-pre code[class*="language-go"] .token.function-variable,
+body.theme-dark .markdown-rendered pre code[class*="language-go"] .token.function-variable,
+body.theme-dark .markdown-preview-view pre code[class*="language-go"] .token.function-variable {
+  color: var(--vsc-go-function) !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+}
+
+/* Variables */
+body.theme-dark .code-styler pre.code-styler-pre code[class*="language-go"] .token.variable,
+body.theme-dark .markdown-rendered pre code[class*="language-go"] .token.variable,
+body.theme-dark .markdown-preview-view pre code[class*="language-go"] .token.variable {
+  color: var(--vsc-go-variable) !important;
+  font-style: normal !important;
+}
+
+/* Properties / method calls — yellow in Dark+ (fmt.Println, server.Start, etc.) */
+body.theme-dark .code-styler pre.code-styler-pre code[class*="language-go"] .token.property,
+body.theme-dark .markdown-rendered pre code[class*="language-go"] .token.property,
+body.theme-dark .markdown-preview-view pre code[class*="language-go"] .token.property,
+body.theme-dark .code-styler pre.code-styler-pre code[class*="language-go"] .token.attr-name,
+body.theme-dark .markdown-rendered pre code[class*="language-go"] .token.attr-name,
+body.theme-dark .markdown-preview-view pre code[class*="language-go"] .token.attr-name {
+  color: var(--vsc-go-function) !important;
+  font-style: normal !important;
+}
+
+/* Numbers */
+body.theme-dark .code-styler pre.code-styler-pre code[class*="language-go"] .token.number,
+body.theme-dark .markdown-rendered pre code[class*="language-go"] .token.number,
+body.theme-dark .markdown-preview-view pre code[class*="language-go"] .token.number {
+  color: var(--vsc-go-number) !important;
+  font-style: normal !important;
+}
+
+/* Booleans & constants (blue in Dark+, same as keywords) */
+body.theme-dark .code-styler pre.code-styler-pre code[class*="language-go"] .token.boolean,
+body.theme-dark .markdown-rendered pre code[class*="language-go"] .token.boolean,
+body.theme-dark .markdown-preview-view pre code[class*="language-go"] .token.boolean,
+body.theme-dark .code-styler pre.code-styler-pre code[class*="language-go"] .token.constant,
+body.theme-dark .markdown-rendered pre code[class*="language-go"] .token.constant,
+body.theme-dark .markdown-preview-view pre code[class*="language-go"] .token.constant {
+  color: var(--vsc-go-constant) !important;
+  font-style: normal !important;
+}
+
+/* Operators */
+body.theme-dark .code-styler pre.code-styler-pre code[class*="language-go"] .token.operator,
+body.theme-dark .markdown-rendered pre code[class*="language-go"] .token.operator,
+body.theme-dark .markdown-preview-view pre code[class*="language-go"] .token.operator {
+  color: var(--vsc-go-operator) !important;
+  font-style: normal !important;
+  background: none !important;
+}
+
+/* Punctuation */
+body.theme-dark .code-styler pre.code-styler-pre code[class*="language-go"] .token.punctuation,
+body.theme-dark .markdown-rendered pre code[class*="language-go"] .token.punctuation,
+body.theme-dark .markdown-preview-view pre code[class*="language-go"] .token.punctuation {
+  color: var(--vsc-go-punctuation) !important;
+  font-style: normal !important;
+}
+
+/* Namespace / package */
+body.theme-dark .code-styler pre.code-styler-pre code[class*="language-go"] .token.namespace,
+body.theme-dark .markdown-rendered pre code[class*="language-go"] .token.namespace,
+body.theme-dark .markdown-preview-view pre code[class*="language-go"] .token.namespace {
+  color: var(--vsc-go-namespace) !important;
+  font-style: normal !important;
+}
+
+/* Important */
+body.theme-dark .code-styler pre.code-styler-pre code[class*="language-go"] .token.important,
+body.theme-dark .markdown-rendered pre code[class*="language-go"] .token.important,
+body.theme-dark .markdown-preview-view pre code[class*="language-go"] .token.important {
+  color: var(--vsc-go-keyword) !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+}
+
+/* Regex */
+body.theme-dark .code-styler pre.code-styler-pre code[class*="language-go"] .token.regex,
+body.theme-dark .markdown-rendered pre code[class*="language-go"] .token.regex,
+body.theme-dark .markdown-preview-view pre code[class*="language-go"] .token.regex {
+  color: var(--vsc-go-string) !important;
+  font-style: normal !important;
+}
+
+
+/* ================================================================
+   EDITING VIEW — CodeMirror 6 Token Overrides (scoped to Go)
+   code-styler adds "language-go" on HyperMD-codeblock lines.
+   Uses compound selectors for guaranteed override of github-dark.
+   ================================================================ */
+
+/* Keywords */
+body.theme-dark .cm-line.HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-keyword,
+body.theme-dark .markdown-source-view .HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-keyword {
+  color: var(--vsc-go-keyword) !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+}
+
+/* Built-ins */
+body.theme-dark .cm-line.HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-builtin,
+body.theme-dark .markdown-source-view .HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-builtin {
+  color: var(--vsc-go-type) !important;
+  font-style: normal !important;
+}
+
+/* Strings */
+body.theme-dark .cm-line.HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-string,
+body.theme-dark .markdown-source-view .HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-string,
+body.theme-dark .cm-line.HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-string-2,
+body.theme-dark .markdown-source-view .HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-string-2 {
+  color: var(--vsc-go-string) !important;
+  font-style: normal !important;
+}
+
+/* Comments — NOT italic in VS Code Dark+ */
+body.theme-dark .cm-line.HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-comment,
+body.theme-dark .markdown-source-view .HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-comment {
+  color: var(--vsc-go-comment) !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+}
+
+/* Function/method definitions & calls */
+body.theme-dark .cm-line.HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-def,
+body.theme-dark .markdown-source-view .HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-def,
+body.theme-dark .cm-line.HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-callee,
+body.theme-dark .markdown-source-view .HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-callee {
+  color: var(--vsc-go-function) !important;
+  font-style: normal !important;
+}
+
+/* Variables (cm-variable only — regular identifiers) */
+body.theme-dark .cm-line.HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-variable,
+body.theme-dark .markdown-source-view .HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-variable {
+  color: var(--vsc-go-variable) !important;
+  font-style: normal !important;
+}
+
+/* Type identifiers & struct names (cm-variable-2, cm-variable-3 = types in Go's CM6 mode) */
+body.theme-dark .cm-line.HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-variable-2,
+body.theme-dark .markdown-source-view .HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-variable-2,
+body.theme-dark .cm-line.HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-variable-3,
+body.theme-dark .markdown-source-view .HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-variable-3 {
+  color: var(--vsc-go-type) !important;
+  font-style: normal !important;
+}
+
+/* Properties / method calls — yellow (fmt.Println, server.Start, etc.) */
+body.theme-dark .cm-line.HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-property,
+body.theme-dark .markdown-source-view .HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-property {
+  color: var(--vsc-go-function) !important;
+  font-style: normal !important;
+}
+
+/* Numbers */
+body.theme-dark .cm-line.HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-number,
+body.theme-dark .markdown-source-view .HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-number {
+  color: var(--vsc-go-number) !important;
+  font-style: normal !important;
+}
+
+/* Atoms / booleans / nil (blue in Dark+, same as keywords) */
+body.theme-dark .cm-line.HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-atom,
+body.theme-dark .markdown-source-view .HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-atom {
+  color: var(--vsc-go-constant) !important;
+  font-style: normal !important;
+}
+
+/* Operators */
+body.theme-dark .cm-line.HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-operator,
+body.theme-dark .markdown-source-view .HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-operator {
+  color: var(--vsc-go-operator) !important;
+  font-style: normal !important;
+}
+
+/* Punctuation */
+body.theme-dark .cm-line.HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-punctuation,
+body.theme-dark .markdown-source-view .HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-punctuation {
+  color: var(--vsc-go-punctuation) !important;
+  font-style: normal !important;
+}
+
+/* Types */
+body.theme-dark .cm-line.HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-type,
+body.theme-dark .markdown-source-view .HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-type {
+  color: var(--vsc-go-type) !important;
+  font-style: normal !important;
+}
+
+/* Tags */
+body.theme-dark .cm-line.HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-tag,
+body.theme-dark .markdown-source-view .HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-tag {
+  color: var(--vsc-go-keyword) !important;
+  font-style: normal !important;
+}
+
+/* Attributes */
+body.theme-dark .cm-line.HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-attribute,
+body.theme-dark .markdown-source-view .HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-attribute {
+  color: var(--vsc-go-type) !important;
+  font-style: normal !important;
+}
+
+/* Qualifiers & meta */
+body.theme-dark .cm-line.HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-qualifier,
+body.theme-dark .markdown-source-view .HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-qualifier,
+body.theme-dark .cm-line.HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-meta,
+body.theme-dark .markdown-source-view .HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock.cm-meta {
+  color: var(--vsc-go-type) !important;
+  font-style: normal !important;
+}
+
+/* Default text color for Go lines in editing view */
+body.theme-dark .cm-line.HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock,
+body.theme-dark .markdown-source-view .HyperMD-codeblock[class*="language-go"] .cm-hmd-codeblock {
+  color: var(--vsc-go-text) !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+}

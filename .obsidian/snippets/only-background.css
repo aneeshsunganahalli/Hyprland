@@ -1,0 +1,34 @@
+.theme-dark {
+  /* Core Backgrounds (Kept at #141414 as requested) */
+  --background-primary: #141414 !important;
+  --background-primary-alt: #101010 !important;
+  --background-secondary: #181818 !important;
+  --background-secondary-alt: #101010 !important;
+  
+  /* Selection and Highlights (Changed to Light Cool Blue #99D1FF) */
+  --text-accent: #99D1FF !important; 
+  --interactive-accent: rgba(153, 209, 255, 0.8) !important;
+  --text-highlight-bg: rgba(153, 209, 255, 0.2) !important;
+  --bg-accent-25: rgba(153, 209, 255, 0.15) !important;
+  --bg-acc/* ent-55: rgba(153, 209, 255, 0.25) !important;
+  
+  /* Borders */
+  --background-modifier-border: rgba(153, 209, 255, 0.1) !important;
+  --editor-border-color: #1a1a1a !important;
+}
+
+/* Ensure the file explorer active item is Blue on the new background */
+.nav-file-title.is-active,
+.nav-folder-title.is-active {
+  background-color: rgba(153, 209, 255, 0.1) !important;
+  border: 1px solid #99D1FF !important;
+  color: #99D1FF !important;
+}
+
+/* Line highlighter (Blue tint) */
+.cm-active {
+  background-color: rgba(153, 209, 255, 0.05) !important;
+ } 
+
+/* ========================= Graph View Only ========================= */
+/*.graph-view.color-fill          { color: #7c3aed; } */

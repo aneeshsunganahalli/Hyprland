@@ -1,0 +1,17 @@
+{
+  "cssTheme": "Minimal",
+  "theme": "obsidian",
+  "monospaceFontFamily": "JetBrainsMono Nerd Font Propo",
+  "accentColor": "#ffffff",
+  "baseFontSize": 17,
+  "nativeMenus": false,
+  "enabledCssSnippets": [
+    "command-palette",
+    "wide-tables",
+    "calendar",
+    "colored-sidebar",
+    "golang-vscode",
+    "github-dark",
+    "dark-theme"
+  ]
+}

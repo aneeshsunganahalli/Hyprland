@@ -1,0 +1,46 @@
+{
+  "logoType": "none",
+  "logo": {
+    "lucideIcon": "bitcoin",
+    "imagePath": "Images/gojo.png",
+    "imageLink": ""
+  },
+  "logoScale": 1.2,
+  "iconColorType": "default",
+  "wordmark": "",
+  "customFont": "interfaceFont",
+  "fontSize": "4em",
+  "fontColorType": "default",
+  "fontWeight": 600,
+  "maxResults": 25,
+  "showbookmarkedFiles": true,
+  "showRecentFiles": true,
+  "maxRecentFiles": 5,
+  "storeRecentFile": true,
+  "showPath": true,
+  "selectionHighlight": "default",
+  "showShortcuts": true,
+  "markdownOnly": false,
+  "unresolvedLinks": false,
+  "recentFilesStore": [
+    {
+      "filepath": "Obsidian/Homepage.md",
+      "timestamp": 1774078552411
+    },
+    {
+      "filepath": "Obsidian/04 Dynamic Programming/2D, 3D and DP on Grids/Triangle.md",
+      "timestamp": 1774078096406
+    },
+    {
+      "filepath": "Images/Banner3.png",
+      "timestamp": 1774077573936
+    }
+  ],
+  "bookmarkedFileStore": [],
+  "searchDelay": 0,
+  "replaceNewTabs": true,
+  "newTabOnStart": false,
+  "closePreviousSessionTabs": false,
+  "omnisearch": true,
+  "showOmnisearchExcerpt": true
+}

@@ -1,0 +1,20 @@
+{
+  "alwaysUpdateLinks": true,
+  "vimMode": false,
+  "showLineNumber": false,
+  "newFileLocation": "current",
+  "newFileFolderPath": "Obsidian",
+  "attachmentFolderPath": "./",
+  "userIgnoreFilters": null,
+  "readableLineLength": false,
+  "propertiesInDocument": "hidden",
+  "defaultViewMode": "preview",
+  "openBehavior": "",
+  "promptDelete": false,
+  "pdfExportSettings": {
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
+}

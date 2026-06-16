@@ -1,0 +1,39 @@
+.theme-dark .heatmap-tracker-container,
+.theme-dark .heatmap-tracker-legend,
+.theme-dark .heatmap-tracker-statistics,
+.theme-dark .heatmap-tracker__container {
+  background-color: #0f131a;
+  border-color: #202938;
+}
+
+.theme-dark .heatmap-tracker-container:hover,
+.theme-dark .heatmap-tracker-legend:hover,
+.theme-dark .heatmap-tracker-statistics:hover {
+  border-color: #30425d;
+}
+
+.theme-dark .heatmap-tracker-months,
+.theme-dark .heatmap-tracker-days,
+.theme-dark .heatmap-tracker-week-nums,
+.theme-dark .legend-view,
+.theme-dark .legend-view table th,
+.theme-dark .legend-view table td {
+  color: #8c97aa;
+}
+
+.theme-dark .heatmap-tracker-box {
+  background-color: #1a212d;
+  border-color: #273245;
+}
+
+.theme-dark .heatmap-tracker-box:hover {
+  border-color: #4b76b4;
+}
+
+.theme-dark .heatmap-tracker-boxes .isEmpty {
+  background: #1a212d !important;
+}
+
+.theme-dark .heatmap-tracker-loading:after {
+  background-color: #0f131a;
+}

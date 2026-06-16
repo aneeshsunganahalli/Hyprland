@@ -1,0 +1,42 @@
+{
+  "logoType": "none",
+  "logo": {
+    "lucideIcon": "bitcoin",
+    "imagePath": "Images/gojo.png",
+    "imageLink": ""
+  },
+  "logoScale": 1.2,
+  "iconColorType": "default",
+  "wordmark": "",
+  "customFont": "interfaceFont",
+  "fontSize": "4em",
+  "fontColorType": "default",
+  "fontWeight": 600,
+  "maxResults": 25,
+  "showbookmarkedFiles": true,
+  "showRecentFiles": true,
+  "maxRecentFiles": 5,
+  "storeRecentFile": true,
+  "showPath": true,
+  "selectionHighlight": "default",
+  "showShortcuts": true,
+  "markdownOnly": false,
+  "unresolvedLinks": false,
+  "recentFilesStore": [
+    {
+      "filepath": "Obsidian/Homepage.md",
+      "timestamp": 1781606294630
+    },
+    {
+      "filepath": "Obsidian/Morgan Stanley/Budget.md",
+      "timestamp": 1781606290912
+    }
+  ],
+  "bookmarkedFileStore": [],
+  "searchDelay": 0,
+  "replaceNewTabs": false,
+  "newTabOnStart": false,
+  "closePreviousSessionTabs": false,
+  "omnisearch": true,
+  "showOmnisearchExcerpt": true
+}

@@ -1,0 +1,100 @@
+/* --- BASE VARIABLES --- */
+.cards {
+    --card-bg: #1c1c1c;       /* Just slightly lighter than the #141414 background */
+    --card-border: #2d2d2d;
+    --text-title: #e5e5e5;
+    --text-muted: #9ca3af;
+    --pill-bg: #0d2a20;       /* Deep green */
+    --pill-text: #34d399;     /* Light green */
+}
+
+/* --- 1. NUKE ALL OBSIDIAN LIST FORMATTING --- */
+.cards.markdown-rendered ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-left: none !important; /* Removes vertical indentation lines */
+}
+.cards.markdown-rendered li::marker {
+    display: none !important;
+    content: "" !important;
+}
+.cards.markdown-rendered .list-bullet, 
+.cards.markdown-rendered .list-collapse-indicator {
+    display: none !important;
+}
+
+/* --- 2. MAIN GRID & CARDS --- */
+/* The outer list becomes the grid */
+.cards.markdown-rendered > div > ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+/* The top-level list items become the cards */
+.cards.markdown-rendered > div > ul > li {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- 3. CARD HEADERS (h3) --- */
+.cards.markdown-rendered h3 {
+    margin: 0 0 12px 0 !important;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-title);
+}
+
+/* Override link styling in headers */
+.cards.markdown-rendered h3 a.internal-link {
+    color: var(--text-title) !important;
+    text-decoration: none;
+}
+
+/* --- 4. INLINE SUB-ITEMS (The Content) --- */
+/* The inner list loses the grid and goes inline */
+.cards.markdown-rendered > div > ul > li > ul {
+    display: block !important;
+}
+
+.cards.markdown-rendered > div > ul > li > ul > li {
+    display: inline;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-muted);
+}
+
+/* Override link styling in body */
+.cards.markdown-rendered > div > ul > li > ul > li a.internal-link {
+    color: var(--text-muted) !important;
+    text-decoration: none;
+}
+.cards.markdown-rendered > div > ul > li > ul > li a.internal-link:hover {
+    color: var(--text-title) !important; /* Lights up white on hover */
+}
+
+/* Insert the dots ONLY between items */
+.cards.markdown-rendered > div > ul > li > ul > li:not(:last-child)::after {
+    content: " • ";
+    color: #555;
+    white-space: pre;
+}
+
+/* --- 5. THE COLORED PILL HEADER (h2) --- */
+.cards.markdown-rendered h2 {
+    display: inline-block;
+    background-color: var(--pill-bg);
+    color: var(--pill-text);
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border: none;
+}

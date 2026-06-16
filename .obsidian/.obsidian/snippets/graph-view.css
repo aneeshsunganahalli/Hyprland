@@ -1,0 +1,71 @@
+/* ============================================
+   Graph View — Dark Multi-Color Theme
+   Matches reference screenshot with dark bg,
+   white + blue + red + yellow colored nodes.
+   Only targets graph-view elements.
+   ============================================ */
+
+/* ---- Graph canvas background ---- */
+.graph-view.color-fill,
+.graph-view.color-fill-focused {
+  color: #363636;              /* dark charcoal background                */
+}
+
+/* ---- Edge / link lines ---- */
+.graph-view.color-line,
+.graph-view.color-line-highlight {
+  color: rgba(255, 255, 255, 0.09);  /* very subtle gray lines              */
+}
+
+.graph-view.color-line-highlight {
+  color: rgba(255, 255, 255, 0.22);  /* slightly brighter on hover/focus    */
+}
+
+/* ---- Default note nodes (white / light gray) ---- */
+.graph-view.color-fill-highlight {
+  color: #e8e8e8;              /* focused-node halo / fill                */
+}
+
+/* ---- Node circles ---- */
+.graph-view.color-circle {
+  color: #d4d4d4;              /* default node — off-white                */
+}
+
+/* ---- Tag nodes — vibrant blue ---- */
+.graph-view.color-fill-tag {
+  color: #4a7cf7;
+}
+
+/* ---- Attachment nodes — red / coral ---- */
+.graph-view.color-fill-attachment {
+  color: #e05252;
+}
+
+/* ---- Unresolved link nodes — warm yellow ---- */
+.graph-view.color-fill-unresolved {
+  color: #e5c247;
+}
+
+/* ---- Focused / hovered node ---- */
+.graph-view.color-fill-focused {
+  color: #363636;
+}
+
+/* ============================================
+   CSS-variable overrides (some themes read these)
+   ============================================ */
+.graph-view-container,
+.mod-graph .workspace-leaf-content {
+  --graph-line:            rgba(255, 255, 255, 0.09);
+  --graph-node:            #d4d4d4;
+  --graph-node-focused:    #ffffff;
+  --graph-node-tag:        #4a7cf7;
+  --graph-node-attachment: #e05252;
+  --graph-node-unresolved: #e5c247;
+}
+
+/* ---- Hide text labels (matches the screenshot) ---- */
+.graph-view .graph-view-container .links text,
+.graph-view-container text {
+  display: none !important;
+}

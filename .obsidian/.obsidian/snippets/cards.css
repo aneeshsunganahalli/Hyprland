@@ -1,0 +1,56 @@
+/* Container for the cards */
+.cards ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+}
+
+/* Individual Card Styling */
+.cards ul > li {
+    background-color: #1a1a1a; /* Dark card background */
+    border: 1px solid #2d2d2d;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Card Header (The ### Fundamentals part) */
+.cards ul > li > h3 {
+    margin-top: 0;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #e0e0e0;
+}
+
+/* Content inside the card (the bullet points) */
+.cards ul > li > ul {
+    display: block; /* Reset grid for inner list */
+    padding-left: 0;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #a0a0a0;
+    line-height: 1.6;
+}
+
+/* Remove bullets from the inner list to match the image style */
+.cards ul > li > ul > li {
+    border: none;
+    background: transparent;
+    padding: 0;
+    display: list-item;
+    list-style: none;
+}
+
+/* Join the items with dots like in your image */
+.cards ul > li > ul > li::after {
+    content: " • ";
+}
+.cards ul > li > ul > li:last-child::after {
+    content: "";
+}
+.cards ul > li > ul > li {
+    display: inline;
+}

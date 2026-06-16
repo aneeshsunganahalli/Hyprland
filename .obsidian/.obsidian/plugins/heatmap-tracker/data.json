@@ -1,0 +1,50 @@
+{
+  "palettes": {
+    "default": [
+      "#c6e48b",
+      "#7bc96f",
+      "#49af5d",
+      "#2e8840",
+      "#196127"
+    ],
+    "danger": [
+      "#fff33b",
+      "#fdc70c",
+      "#f3903f",
+      "#ed683c",
+      "#e93e3a"
+    ],
+    "obsidianTheme": [
+      "var(--color-base-00)",
+      "var(--color-base-05)",
+      "var(--color-base-10)",
+      "var(--color-base-20)",
+      "var(--color-base-25)",
+      "var(--color-base-30)",
+      "var(--color-base-35)",
+      "var(--color-base-40)",
+      "var(--color-base-50)",
+      "var(--color-base-60)",
+      "var(--color-base-70)",
+      "var(--color-base-100)"
+    ],
+    "Custom Blue": [
+      "rgb(25, 63, 130)",
+      "rgb(36, 89, 184)",
+      "#3d7df2",
+      "rgb(110, 168, 254)",
+      "rgb(158, 203, 255)"
+    ]
+  },
+  "weekStartDay": 1,
+  "showWeekNums": false,
+  "weekDisplayMode": "even",
+  "separateMonths": true,
+  "language": "en",
+  "viewTabsVisibility": {
+    "documentation": true,
+    "heatmap-tracker": true,
+    "heatmap-tracker-statistics": true,
+    "legend": true
+  }
+}

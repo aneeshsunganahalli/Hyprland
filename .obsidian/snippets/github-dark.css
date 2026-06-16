@@ -1,0 +1,320 @@
+/* ============================================
+   GITHUB DARK — Code Block Syntax Highlighting
+   Works in both Editing (CM6) and Reading view
+   ============================================ */
+
+:root {
+  --gh-dark-bg: #1e1e1e;
+  --gh-dark-header: #252526;
+  --gh-dark-border: #3c3c3c;
+  --gh-dark-text: #c9d1d9;
+  --gh-blue: #79c0ff;
+  --gh-light-blue: #a5d6ff;
+  --gh-purple: #d2a8ff;
+  --gh-orange: #ffa657;
+  --gh-red: #ff7b72;
+  --gh-grey: #8b949e;
+  --gh-green: #7ee787;
+  --gh-white: #e6edf3;
+}
+
+
+/* =============================================
+   OBSIDIAN CODE CSS VARIABLES
+   These drive syntax colours in BOTH views
+   ============================================= */
+.theme-dark {
+  --code-normal: var(--gh-dark-text) !important;
+  --code-comment: var(--gh-grey) !important;
+  --code-keyword: var(--gh-red) !important;
+  --code-string: var(--gh-light-blue) !important;
+  --code-function: var(--gh-purple) !important;
+  --code-property: var(--gh-blue) !important;
+  --code-tag: var(--gh-green) !important;
+  --code-value: var(--gh-blue) !important;
+  --code-operator: var(--gh-red) !important;
+  --code-important: var(--gh-blue) !important;
+  --code-punctuation: var(--gh-dark-text) !important;
+  --code-background: var(--gh-dark-bg) !important;
+}
+
+
+/* =============================================
+   CODE-STYLER PLUGIN VARIABLE OVERRIDES
+   These are what the plugin actually uses
+   ============================================= */
+body.code-styler.theme-dark {
+  --code-styler-codeblock-background-colour: var(--gh-dark-bg) !important;
+  --code-styler-codeblock-text-colour: var(--gh-dark-text) !important;
+  --code-styler-gutter-background-colour: var(--gh-dark-bg) !important;
+  --code-styler-gutter-text-colour: #484f58 !important;
+  --code-styler-gutter-active-text-colour: var(--gh-dark-text) !important;
+  --code-styler-header-background-colour: var(--gh-dark-header) !important;
+  --code-styler-header-title-text-colour: var(--gh-dark-text) !important;
+  --code-styler-header-separator-colour: var(--gh-dark-border) !important;
+  --code-styler-header-language-tag-background-colour: var(--gh-dark-border) !important;
+  --code-styler-header-language-tag-text-colour: var(--gh-dark-text) !important;
+}
+
+
+/* ── Code block background (both views) ── */
+body.theme-dark .code-styler pre.code-styler-pre,
+body.theme-dark .code-styler pre.code-styler-pre[class*="language-"] {
+  background: var(--gh-dark-bg) !important;
+  border: 1px solid var(--gh-dark-border) !important;
+}
+
+/* Reading view: plain pre/code (no code-styler) */
+body.theme-dark .markdown-rendered pre,
+body.theme-dark .markdown-rendered pre[class*="language-"],
+body.theme-dark .markdown-preview-view pre,
+body.theme-dark .markdown-preview-view pre[class*="language-"] {
+  background: var(--gh-dark-bg) !important;
+}
+body.theme-dark .markdown-rendered pre > code,
+body.theme-dark .markdown-preview-view pre > code {
+  color: var(--gh-dark-text) !important;
+  background: none !important;
+}
+
+/* Reading view: code-styler line text */
+body.theme-dark pre.code-styler-pre .code-styler-line-text {
+  color: var(--gh-dark-text);
+}
+
+/* Editing view codeblock lines */
+body.theme-dark .markdown-source-view .HyperMD-codeblock {
+  background-color: var(--gh-dark-bg) !important;
+}
+
+/* ── Header bar ── */
+body.theme-dark .code-styler-header-container {
+  background-color: var(--gh-dark-header) !important;
+  border-bottom: 1px solid var(--gh-dark-border) !important;
+  color: var(--gh-dark-text) !important;
+}
+body.theme-dark .markdown-source-view :not(pre.code-styler-pre) > .code-styler-header-container {
+  background: var(--gh-dark-header) !important;
+}
+
+/* ── Line numbers / gutter ── */
+body.theme-dark pre.code-styler-pre .code-styler-line-number,
+body.theme-dark .markdown-source-view div[class*=HyperMD-codeblock] > .code-styler-line-number {
+  background-color: var(--gh-dark-bg) !important;
+  color: #484f58 !important;
+}
+
+/* ── Default code text colour ── */
+body.theme-dark .markdown-source-view .cm-line .cm-hmd-codeblock {
+  color: var(--gh-dark-text) !important;
+}
+body.theme-dark .code-styler pre.code-styler-pre > code {
+  color: var(--gh-dark-text) !important;
+}
+
+
+/* =============================================
+   EDITING VIEW — CodeMirror 6 token classes
+   ============================================= */
+
+/* Keywords */
+body.theme-dark .cm-line .cm-hmd-codeblock.cm-keyword {
+  color: var(--gh-red) !important;
+}
+
+/* Built-in / standard names */
+body.theme-dark .cm-line .cm-hmd-codeblock.cm-builtin {
+  color: var(--gh-blue) !important;
+}
+
+/* Strings */
+body.theme-dark .cm-line .cm-hmd-codeblock.cm-string,
+body.theme-dark .cm-line .cm-hmd-codeblock.cm-string-2 {
+  color: var(--gh-light-blue) !important;
+}
+
+/* Comments */
+body.theme-dark .cm-line .cm-hmd-codeblock.cm-comment {
+  color: var(--gh-grey) !important;
+  font-style: italic;
+}
+
+/* Function / method definitions & calls */
+body.theme-dark .cm-line .cm-hmd-codeblock.cm-def,
+body.theme-dark .cm-line .cm-hmd-codeblock.cm-callee {
+  color: var(--gh-purple) !important;
+}
+
+/* Variables */
+body.theme-dark .cm-line .cm-hmd-codeblock.cm-variable,
+body.theme-dark .cm-line .cm-hmd-codeblock.cm-variable-2,
+body.theme-dark .cm-line .cm-hmd-codeblock.cm-variable-3 {
+  color: var(--gh-dark-text) !important;
+}
+
+/* Properties & attributes */
+body.theme-dark .cm-line .cm-hmd-codeblock.cm-property {
+  color: var(--gh-blue) !important;
+}
+
+/* Numbers */
+body.theme-dark .cm-line .cm-hmd-codeblock.cm-number {
+  color: var(--gh-blue) !important;
+}
+
+/* Atoms / booleans */
+body.theme-dark .cm-line .cm-hmd-codeblock.cm-atom {
+  color: var(--gh-blue) !important;
+}
+
+/* Operators */
+body.theme-dark .cm-line .cm-hmd-codeblock.cm-operator {
+  color: var(--gh-red) !important;
+}
+
+/* Punctuation */
+body.theme-dark .cm-line .cm-hmd-codeblock.cm-punctuation {
+  color: var(--gh-dark-text) !important;
+}
+
+/* Types & type annotations */
+body.theme-dark .cm-line .cm-hmd-codeblock.cm-type {
+  color: var(--gh-orange) !important;
+}
+
+/* HTML/XML Tags */
+body.theme-dark .cm-line .cm-hmd-codeblock.cm-tag {
+  color: var(--gh-green) !important;
+}
+
+/* HTML/XML Attributes */
+body.theme-dark .cm-line .cm-hmd-codeblock.cm-attribute {
+  color: var(--gh-purple) !important;
+}
+
+/* Qualifiers & meta */
+body.theme-dark .cm-line .cm-hmd-codeblock.cm-qualifier,
+body.theme-dark .cm-line .cm-hmd-codeblock.cm-meta {
+  color: var(--gh-blue) !important;
+}
+
+
+/* =============================================
+   READING VIEW — Prism / token classes
+   ============================================= */
+
+/* Keywords */
+body.theme-dark .token.keyword,
+body.theme-dark .token.atrule,
+body.theme-dark .token.control {
+  color: var(--gh-red) !important;
+}
+
+/* Built-ins */
+body.theme-dark .token.builtin,
+body.theme-dark .token.class-name {
+  color: var(--gh-orange) !important;
+}
+
+/* Strings & chars */
+body.theme-dark .token.string,
+body.theme-dark .token.char,
+body.theme-dark .token.template-string,
+body.theme-dark .token.attr-value {
+  color: var(--gh-light-blue) !important;
+}
+
+/* Comments */
+body.theme-dark .token.comment,
+body.theme-dark .token.prolog,
+body.theme-dark .token.doctype,
+body.theme-dark .token.cdata {
+  color: var(--gh-grey) !important;
+  font-style: italic;
+}
+
+/* Functions */
+body.theme-dark .token.function,
+body.theme-dark .token.function-variable,
+body.theme-dark .markdown-rendered .token.function,
+body.theme-dark .markdown-preview-view .token.function,
+body.theme-dark pre.code-styler-pre .token.function,
+body.theme-dark pre.code-styler-pre .code-styler-line-text .token.function,
+body.theme-dark .code-styler pre.code-styler-pre .token.function {
+  color: var(--gh-purple) !important;
+}
+
+/* Variables */
+body.theme-dark .token.variable {
+  color: var(--gh-dark-text) !important;
+}
+
+/* Properties / attribute names */
+body.theme-dark .token.property,
+body.theme-dark .token.attr-name {
+  color: var(--gh-blue) !important;
+}
+
+/* Numbers & booleans */
+body.theme-dark .token.number,
+body.theme-dark .token.boolean {
+  color: var(--gh-blue) !important;
+}
+
+/* Operators */
+body.theme-dark .token.operator,
+body.theme-dark .token.arrow {
+  color: var(--gh-red) !important;
+}
+
+/* Punctuation */
+body.theme-dark .token.punctuation {
+  color: var(--gh-dark-text) !important;
+}
+
+/* HTML/XML tags */
+body.theme-dark .token.tag {
+  color: var(--gh-green) !important;
+}
+
+/* Selectors (CSS) */
+body.theme-dark .token.selector {
+  color: var(--gh-green) !important;
+}
+
+/* Regex */
+body.theme-dark .token.regex {
+  color: var(--gh-light-blue) !important;
+}
+
+/* Important */
+body.theme-dark .token.important {
+  color: var(--gh-red) !important;
+}
+
+/* Decorators & annotations */
+body.theme-dark .token.decorator,
+body.theme-dark .token.annotation {
+  color: var(--gh-orange) !important;
+}
+
+/* Constants */
+body.theme-dark .token.constant {
+  color: var(--gh-blue) !important;
+}
+
+/* Namespace / module */
+body.theme-dark .token.namespace {
+  color: var(--gh-orange) !important;
+}
+
+
+/* ── Inline code ── */
+body.theme-dark .cm-s-obsidian span.cm-inline-code,
+body.theme-dark .markdown-rendered :not(pre) > code,
+body.theme-dark .markdown-preview-view :not(pre) > code {
+  background-color: rgba(110, 118, 129, 0.2) !important;
+  color: var(--gh-dark-text) !important;
+  border-radius: 6px;
+  padding: 0.2em 0.4em;
+}

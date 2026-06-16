@@ -1,0 +1,58 @@
+{
+  "cascadeColors": false,
+  "colorBackground": false,
+  "palette": [
+    {
+      "id": "m6KIWozmokbDFSuR_x3HQ",
+      "name": "Baby Blue",
+      "value": "#077fe9"
+    },
+    {
+      "id": "nnALTgmE_OcWsVm6upw25",
+      "name": "Rust Orange",
+      "value": "#ea7739"
+    },
+    {
+      "id": "rFgSDXLs369FokSwocpiF",
+      "name": "Vim Green",
+      "value": "#29c248"
+    },
+    {
+      "id": "fIUFulXerPbLScOAc69PC",
+      "name": "Pastel Red",
+      "value": "#dd5555"
+    },
+    {
+      "id": "HSK7fXCPUomKD4lhs8keu",
+      "name": "Golang Blue",
+      "value": "#3aa9ee"
+    },
+    {
+      "id": "BDqTnIwMz9LYijJQPh8S9",
+      "name": "HPE",
+      "value": "#48db96"
+    }
+  ],
+  "fileColors": [
+    {
+      "path": "Obsidian/Vim Cheat Sheet.md",
+      "color": "rFgSDXLs369FokSwocpiF"
+    },
+    {
+      "path": "Obsidian/01 System Design",
+      "color": "fIUFulXerPbLScOAc69PC"
+    },
+    {
+      "path": "Obsidian/HPE CPP",
+      "color": "BDqTnIwMz9LYijJQPh8S9"
+    },
+    {
+      "path": "Obsidian/Dynamic Programming",
+      "color": "nnALTgmE_OcWsVm6upw25"
+    },
+    {
+      "path": "Obsidian/Advanced Go",
+      "color": "HSK7fXCPUomKD4lhs8keu"
+    }
+  ]
+}

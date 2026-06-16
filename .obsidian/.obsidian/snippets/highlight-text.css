@@ -1,0 +1,55 @@
+/* ---------------------------------------------------------------
+** Modified Obsidianite Theme
+** - Selection/Active colors: Light Cool Blue
+** - Code Snippets: GitHub Dark Style
+** --------------------------------------------------------------- */
+
+.theme-dark {
+  --background-primary: #100e17;
+  --background-primary-alt: #0d0b12;
+  --background-secondary: #191621;
+  --background-secondary-alt: #0d0b12;
+  --text-normal: #bebebe;
+  
+  /* Changed highlight and selection to Light Cool Blue (#99D1FF) */
+  --text-accent: #13aced; 
+  --interactive-accent: rgba(153, 209, 255, 0.8);
+  --text-highlight-bg: rgba(153, 209, 255, 0.2);
+  --bg-accent-25: rgba(153, 209, 255, 0.25);
+  
+  --text-sub-accent: #f4569d;
+  --text-dim: #45aaff;
+  --text-faint: #7aa2f7;
+  --code-background: #0d1117; /* GitHub Dark BG */
+}
+
+/* --- SELECTED FILE COLOR --- */
+.nav-file-title.is-active,
+.nav-folder-title.is-active {
+  background: var(--background-modifier-border);
+  border: 1px solid #99D1FF;
+  color: #0ea9e7 !important;
+}
+
+/* ... (Keep your GitHub Dark Syntax Highlighting section as is) ... */
+
+/* Selection color in editor */
+.CodeMirror-selected {
+  background-color: rgba(153, 209, 255, 0.2) !important;
+}
+
+/* Italic text - purple */
+.markdown-rendered em,
+.cm-em {
+  color: #b68bde !important;
+}
+
+/* Bold text - blue to purple gradient */
+.markdown-rendered strong,
+.cm-strong {
+  background: linear-gradient(90deg, #84b3ff, #dbb5fe);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}

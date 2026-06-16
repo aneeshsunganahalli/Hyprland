@@ -1,0 +1,53 @@
+{
+  "settings": {
+    "migrated": 6,
+    "iconPacksPath": ".obsidian/icons",
+    "fontSize": 16,
+    "emojiStyle": "native",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "LiHammer",
+      "LiAlarmClock",
+      "LiBox",
+      "LiGithub",
+      "LiWorkflow"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": true,
+    "iconInTitleEnabled": false,
+    "iconInTitlePosition": "above",
+    "iconInFrontmatterEnabled": false,
+    "iconInFrontmatterFieldName": "icon",
+    "iconColorInFrontmatterFieldName": "iconColor",
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true,
+    "iconsInLinksEnabled": true,
+    "iconIdentifier": ":",
+    "lucideIconPackType": "native",
+    "debugMode": false,
+    "useInternalPlugins": false
+  },
+  "Obsidian/06 Daily Notes": "LiNotebook",
+  "Obsidian/05 Misc": "LiMenu",
+  "Obsidian/02 Advanced Go": "LiGoal",
+  "Obsidian/03 Development": "LiHammer",
+  "Obsidian/03 Development/HPE CPP": "LiServer",
+  "Obsidian/03 Development/HPE CPP/CPU Utilization": "LiCpu",
+  "Obsidian/03 Development/HPE CPP/Monitor CLI": "LiMonitorUp",
+  "Obsidian/01 Computer Science": "LiGithub",
+  "Obsidian/07 DSA": "LiPuzzle",
+  "Obsidian/07 DSA/Advanced Structures": "LiAlertOctagon",
+  "Obsidian/07 DSA/Contests": "LiTrophy",
+  "Obsidian/07 DSA/Dynamic Programming": "LiBookOpenCheck",
+  "Obsidian/07 DSA/Graphs": "LiGitGraph",
+  "Obsidian/03 Development/GoGit": "LiGithub",
+  "Obsidian/04 WhiteBox": "LiBox",
+  "Obsidian/03 Development/HPE CPP/ML Modelling": "LiAlarmClock"
+}
