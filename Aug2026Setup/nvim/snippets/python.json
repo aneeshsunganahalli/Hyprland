@@ -1,0 +1,18 @@
+{
+  "CSES Template": {
+    "prefix": "cses",
+    "body": [
+      "import sys",
+      "",
+      "# Fast I/O",
+      "input = sys.stdin.readline",
+      "",
+      "def solve():",
+      "    ${1:pass}",
+      "",
+      "if __name__ == \"__main__\":",
+      "    solve()"
+    ],
+    "description": "Python template for competitive programming"
+  }
+}

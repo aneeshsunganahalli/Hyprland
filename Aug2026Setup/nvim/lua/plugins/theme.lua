@@ -1,0 +1,1 @@
+/home/aneesh/.config/omarchy/current/theme/neovim.lua
